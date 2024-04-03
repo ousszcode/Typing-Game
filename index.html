@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"/>
+    <script
+    src="https://kit.fontawesome.com/4c536a6bd5.js"
+    crossorigin="anonymous"></script> 
+    <title>Typing Speed Game</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Typing Game</h1>
+    </header>
+    <main class="main">
+        <div id="settings" class="settings">
+            <form class="settings-form">
+                <div>
+                    <label for="difficulty"><h3>Difficulty</h3></label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <div class="container" id="game-container">
+            <h2 class="question">Who can beat my score?</h2>
+            <h3 class="message">Type The Following: </h3>
+            <h1 id="word"></h1>
+            <input type="text" id="text" autocomplete="off" placeholder="Type the word here ... ">
+
+            <p class="time-container">Time left: <span id="time">10s</span></p>
+            <p class="score-container">Score: <span id="score">0</span></p>
+            <div id="end-game-container" class="end-game-container"></div>
+            <br>
+            <button id="start-btn">Start Game</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            Yacine Allal / Oussama Safar Zitoun
+        </p>
+        <a href="http://github.com/SisyphusTheSecond" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+   
+</body>
+</html>

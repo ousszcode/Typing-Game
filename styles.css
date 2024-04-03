@@ -1,0 +1,203 @@
+:root {
+    --primary-light: #ddd;
+    --primary-dark: #222831;
+    --secondary-dark: #393e36;
+    --secondary-dark-hover: #4a4f57;
+    --secondary-dark-active: #5b5f68;
+    --header: #111720;
+    --primary-yellow: #fac650;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    background-color: var(--header);
+}
+
+.title {
+    font-size: 32px;
+    color: var(--primary-yellow);
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* MAIN */
+.main {
+    margin-top: 40px;
+    text-align: center;
+    background-color: var(--primary-dark); 
+    color: var(--primary-light);
+    min-height: calc(100vh - 260px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.settings {
+    position: relative;
+    /* background-color: var(--secondary-dark); */
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%; 
+}
+
+
+
+
+label {
+    font-size: 20px;
+    color: var(--primary-light);
+}
+
+select {
+    width: 100%; 
+    max-width: 200px; 
+    padding: 10px;
+    margin-top: 10px;
+    background-color: var(--primary-yellow); 
+    border: none;
+    border-radius: 4px;
+    color: var(--primary-dark);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container {
+    background-color: var(--header); 
+    padding: 30px;
+    border-radius: 20px;
+    color: var(--primary-light);
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+    width: 100%; 
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.question {
+    margin-bottom: 20px;
+    color: var(--primary-light);
+}
+
+input {
+    border: 0;
+    border-radius: 4px;
+    font-size: 18px;
+    width: 300px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    background: var(--primary-light);
+}
+  
+.score-container {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    font-size: 18px;
+    color: var(--primary-light);
+    padding: 20px;
+}
+  
+.time-container {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 18px;
+    color: var(--primary-light);
+    padding: 20px;
+}
+
+#start-btn {
+    color: var(--primary-dark);
+    background-color: var(--primary-yellow);
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.end-game-container {
+    background-color: inherit;
+    border-radius: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#reload-button {
+    color: var(--primary-dark);
+    background-color: var(--primary-yellow);
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 0px;
+}
+
+#reload-button:hover {
+    background-color: var(--secondary-dark);
+    color: var(--primary-light);
+}
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    color: var(--primary-light);
+    font-size: 20px;
+}
+
+.fa-github {
+    color: var(--primary-light);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
